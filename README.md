@@ -35,6 +35,18 @@ Working through these hands-on missions provided several practical insights into
 
 ---
 
+## Topics Explored
+
+- **Computer Fundamentals & Architecture:** The Input-Process-Output-Storage (IPOS) model, hardware components (CPU, RAM, SSD, GPU), and software classification (system, application, utility).
+- **Terminal & Command-Line Fluency:** Directory navigation, safe file manipulation, output redirection (`>` vs `>>`), flags (`ls -lah`), Unix pipelines (`|`), and package managers (Homebrew).
+- **Operating System Internals:** Kernel inspection, user identity, filesystem mounts (`df -h`), process management (PIDs), relative vs absolute paths, and Unix permission triplets (`rwx`).
+- **Program Execution:** How source code runs, compiler ahead-of-time (AOT) machine code vs interpreter runtime evaluation, and Python script execution.
+- **Data Representation & Text Encoding:** Decimal, binary, and hexadecimal arithmetic conversions, Python verification functions (`bin()`, `hex()`, `int()`), and character encoding standards (ASCII vs UTF-8).
+- **Version Control & Collaboration:** Git workflow (`status`, `add`, `commit`, `log`), feature branching, GitHub Pull Requests, and code review lifecycles.
+- **Computer Networking:** Network scopes (LAN, MAN, WAN), protocols (TCP/IP, HTTP/HTTPS, DNS), packet switching, client-server architecture, and live network diagnostics (`ping`, `nslookup`).
+
+---
+
 ## Mission Index
 
 | Mission | Focus Area | Status | Folder / Report |
@@ -47,7 +59,38 @@ Working through these hands-on missions provided several practical insights into
 | **5** | Number systems, Python verification, and text encoding | Completed | [mission-05-numbers-data/](mission-05-numbers-data/README.md) |
 | **6** | Git collaboration, branching, and pull requests | Completed | [mission-06-git-github/](mission-06-git-github/README.md) |
 | **7** | Computer networking, DNS lookup, and web communication | Completed | [mission-07-networking/](mission-07-networking/README.md) |
-| **8** | Final review, verification, and submission checklist | In Progress | [mission-08-final-report/](mission-08-final-report/README.md) |
+| **8** | Final review, verification, and submission checklist | Completed | [mission-08-final-report/](mission-08-final-report/README.md) |
+
+*Note: In accordance with assignment instructions, each mission was completed, documented, and committed separately with a dedicated, descriptive Git commit message.*
+
+---
+
+## Instructions for Running the Number Converter
+
+The repository includes an interactive Python number conversion utility in `mission-05-numbers-data/number_converter.py`.
+
+### How to Run:
+1. Open your terminal and navigate into the `mission-05-numbers-data` folder:
+   ```bash
+   cd mission-05-numbers-data
+   ```
+2. Execute the script using Python 3:
+   ```bash
+   python3 number_converter.py
+   ```
+3. When prompted, enter any positive decimal integer (e.g. `42`):
+   ```text
+   ==========================================
+      Digital Detective: Number Converter    
+   ==========================================
+   Enter a positive decimal integer: 42
+
+   --- Conversion Results ---
+   Decimal (Base 10):     42
+   Binary (Base 2):       101010  (Prefix notation: 0b101010)
+   Hexadecimal (Base 16): 2A  (Prefix notation: 0x2a)
+   ==========================================
+   ```
 
 ---
 
@@ -57,6 +100,7 @@ Working through these hands-on missions provided several practical insights into
 digital-detective-8020/
 ├── README.md
 ├── evidence/
+│   └── .gitkeep
 ├── mission-00-setup/
 │   └── README.md
 ├── mission-01-computer-basics/
@@ -78,6 +122,8 @@ digital-detective-8020/
 ├── mission-08-final-report/
 │   └── README.md
 └── terminal-practice/
+    ├── sample-renamed.txt
+    └── sample.txt
 ```
 
 ---
