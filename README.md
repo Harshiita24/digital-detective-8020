@@ -46,8 +46,8 @@ Working through these hands-on missions provided several practical insights into
 | **4** | Program execution, compilers, and interpreters | Completed | [mission-04-programs/](mission-04-programs/README.md) |
 | **5** | Number systems, Python verification, and text encoding | Completed | [mission-05-numbers-data/](mission-05-numbers-data/README.md) |
 | **6** | Git collaboration, branching, and pull requests | Completed | [mission-06-git-github/](mission-06-git-github/README.md) |
-| **7** | Computer networking, DNS lookup, and web communication | In Progress | [mission-07-networking/](mission-07-networking/README.md) |
-| **8** | Final review, verification, and submission checklist | Pending | [mission-08-final-report/](mission-08-final-report/README.md) |
+| **7** | Computer networking, DNS lookup, and web communication | Completed | [mission-07-networking/](mission-07-networking/README.md) |
+| **8** | Final review, verification, and submission checklist | In Progress | [mission-08-final-report/](mission-08-final-report/README.md) |
 
 ---
 
