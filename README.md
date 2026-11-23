@@ -31,8 +31,8 @@ Every mission has been researched, verified on my own machine, documented with o
 | Mission | Focus Area | Status | Folder / Report |
 | :---: | :--- | :---: | :--- |
 | **0** | Repository and workspace setup | Completed | [mission-00-setup/](mission-00-setup/README.md) |
-| **1** | Computer fundamentals and IPOS model | In Progress | [mission-01-computer-basics/](mission-01-computer-basics/README.md) |
-| **2** | Terminal operations, flags, and file management | Pending | [mission-02-terminal/](mission-02-terminal/README.md) |
+| **1** | Computer fundamentals and IPOS model | Completed | [mission-01-computer-basics/](mission-01-computer-basics/README.md) |
+| **2** | Terminal operations, flags, and file management | In Progress | [mission-02-terminal/](mission-02-terminal/README.md) |
 | **3** | Operating system internals, processes, and permissions | Pending | [mission-03-operating-system/](mission-03-operating-system/README.md) |
 | **4** | Program execution, compilers, and interpreters | Pending | [mission-04-programs/](mission-04-programs/README.md) |
 | **5** | Number systems, Python verification, and text encoding | Pending | [mission-05-numbers-data/](mission-05-numbers-data/README.md) |
