@@ -1,54 +1,41 @@
 # Mission 0 — Create your GitHub workspace
 
 ## 1. Task / objective
-The goal of Mission 0 is to configure a clean, standardized development workspace for the entire assignment. This includes picking a valid repository name according to the naming formula (`digital-detective-<last-four-digits-of-USN>`), setting up the required directory hierarchy and Markdown templates, checking installed tools (Git and Python 3), and linking the local repository to a public GitHub remote.
+Set up my project workspace for the assignment. This meant picking the right repository name using my USN (`digital-detective-8020`), making all the mission folders, checking that Python 3 and Git are installed on my laptop, and connecting my local folder to GitHub.
 
 ## 2. Work completed
-- Named the repository `digital-detective-8020` based on the assignment guideline (`digital-detective-` followed by the last four digits of USN `2402608020`).
-- Created the project folder on the local machine and initialized Git tracking on the `main` branch.
-- Created all required mission folders (`mission-00-setup` through `mission-08-final-report`) and the `evidence/` directory.
-- Checked installed toolchain versions in the terminal for Git and Python 3.
-- Drafted the root `README.md` containing student identification, assignment description, environment details, and a clickable mission navigation index.
-- Created the remote GitHub repository at `https://github.com/Harshiita24/digital-detective-8020` and linked the local origin remote.
+- Named the project folder `digital-detective-8020` following the assignment rule (assignment name + hyphen + last 4 digits of my USN `2402608020`).
+- Created all the folders for each mission (`mission-00-setup` to `mission-08-final-report`) and the `evidence/` folder.
+- Checked my terminal to make sure Git and Python 3 were installed and ready.
+- Created the main `README.md` file to introduce the project and link to all missions.
+- Created an empty public repository on GitHub and pushed my initial folders.
 
 ## 3. Commands / tools used
-- `git init`: Initialized the local repository directory for version tracking.
-- `git branch -M main`: Set the default branch name to `main`.
-- `git remote add origin https://github.com/Harshiita24/digital-detective-8020.git`: Connected the local repository to GitHub.
-- `python3 --version`: Verified the Python 3 interpreter (`Python 3.9.6`).
-- `git --version`: Verified the Git command-line client (`git version 2.54.0 (Apple Git-157)`).
-- `mkdir -p`: Created all required mission subdirectories cleanly from the command line.
+- `git init`: Started Git inside my project folder so it can track changes.
+- `git branch -M main`: Made sure my default branch is named `main`.
+- `git remote add origin https://github.com/Harshiita24/digital-detective-8020.git`: Connected my local folder to my GitHub account.
+- `python3 --version`: Checked which Python version is installed (got `Python 3.9.6`).
+- `git --version`: Checked which Git version is installed (got `git version 2.54.0`).
+- `mkdir`: Created all the mission folders from the terminal.
 
 ## 4. My understanding
-A Git repository serves as a trackable record of a project's evolution over time. Instead of saving multiple messy copies of files with names like "final_v2_really_final", Git captures snapshots of the exact state of files with meaningful messages explaining the reasons behind every change.
-
-Splitting this assignment into numbered mission folders keeps each topic self-contained. When someone inspects the repository, they can examine terminal practice, operating system queries, or networking tests in isolation without wading through a single cluttered folder. This modular organization also makes debugging, grading, and incremental commits straightforward.
+A Git repository is basically a project folder with a built-in history tracker. Instead of saving multiple versions of files with names like "final_v2", Git takes snapshots of my work whenever I commit. Organizing the assignment into separate mission folders makes it much easier to find things. Each topic has its own place, so my terminal practice doesn't get mixed up with my Python programs or network notes.
 
 ## 5. Difficulties faced
-I had to make sure the repository name followed the exact naming rule without spaces, capital letters, or underscores so it conforms to standard GitHub URL conventions. Another point of attention was ensuring that creating the remote GitHub repository did not automatically add a default README, `.gitignore`, or license on GitHub before my local structure was pushed, which would have caused merge conflicts on the first push.
+At first, I had to make sure I got the folder name right with lowercase letters and hyphens so it matched the GitHub repository name. I also wanted to make sure I didn't create a default README on GitHub while creating the repository online, because that would cause a conflict when pushing from my computer.
 
 ## 6. How I resolved them
-I followed the assignment naming rule strictly (`digital-detective-8020`). When creating the repository on GitHub, I left it completely empty (without an auto-generated README or license), allowing the initial local commit and branch structure to push cleanly to `origin/main`.
+I double checked the assignment naming instructions before creating the folder. When creating the repository on GitHub, I left the boxes for adding a README and license unchecked, so my local setup pushed smoothly without any conflicts.
 
 ## 7. Evidence / files
-- Root documentation: `README.md`
-- Mission setup file: `mission-00-setup/README.md`
-- Toolchain checks:
+- Root file: `README.md`
+- Mission file: `mission-00-setup/README.md`
+- Tool checks:
   - Python: `Python 3.9.6`
-  - Git: `git version 2.54.0 (Apple Git-157)`
-- Created mission directories:
-  - `mission-00-setup/`
-  - `mission-01-computer-basics/`
-  - `mission-02-terminal/`
-  - `mission-03-operating-system/`
-  - `mission-04-programs/`
-  - `mission-05-numbers-data/`
-  - `mission-06-git-github/`
-  - `mission-07-networking/`
-  - `mission-08-final-report/`
-  - `evidence/`
+  - Git: `git version 2.54.0`
+- Mission directories: `mission-00-setup/` through `mission-08-final-report/`
 
 ## 8. Commit details
-- **Commit message:** `Set up Digital Detective mission structure`
-- **Target branch:** `main`
-- **Remote destination:** `https://github.com/Harshiita24/digital-detective-8020`
+- Commit message: `Set up Digital Detective mission structure`
+- Branch: `main`
+- Remote URL: `https://github.com/Harshiita24/digital-detective-8020`

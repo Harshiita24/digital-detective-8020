@@ -1,19 +1,19 @@
 # Mission 4 — How programs run
 
 ## 1. Task / objective
-The goal of Mission 4 is to investigate how source code written by human developers is converted into instructions a computer's CPU can carry out. This involves creating and executing a minimal Python script (`hello.py`) from the terminal, comparing how compilers and interpreters process programming languages, and evaluating the engineering trade-offs between ahead-of-time compilation and runtime interpretation.
+Understand how code written by humans actually runs on a computer. This involved making a simple Python script named `hello.py`, running it from the terminal, and comparing the difference between a compiler and an interpreter.
 
 ## 2. Work completed
-- Created `hello.py` inside `mission-04-programs/` containing a single print statement displaying `"Hello from Python"`.
-- Executed the script from the command line using `python3 mission-04-programs/hello.py` and verified the output stream.
-- Built a detailed comparison table between compilers and interpreters analyzing timing, output artifacts, language examples, and technical advantages.
-- Wrote a clear explanation in my own words breaking down how compilers and interpreters translate and execute software.
+- Created a one-line Python script called `hello.py` inside `mission-04-programs/` that prints `"Hello from Python"`.
+- Ran the script in the terminal using `python3` and confirmed the message appeared.
+- Made a comparison table between compilers and interpreters looking at when translation happens, what files they create, examples of each, and their main advantages.
+- Wrote a short paragraph explaining the difference in my own words.
 
 ---
 
 ### Task 4.1 — Create and run a Python program
 - File path: `mission-04-programs/hello.py`
-- Program code:
+- Code:
   ```python
   print("Hello from Python")
   ```
@@ -21,7 +21,7 @@ The goal of Mission 4 is to investigate how source code written by human develop
   ```bash
   python3 mission-04-programs/hello.py
   ```
-- Observed terminal output:
+- Terminal output:
   ```text
   Hello from Python
   ```
@@ -32,35 +32,34 @@ The goal of Mission 4 is to investigate how source code written by human develop
 
 | Point | Compiler | Interpreter |
 | :--- | :--- | :--- |
-| **When translation / execution happens** | Translation happens entirely ahead of time (AOT) in a dedicated build step before the program runs. | Translation happens instruction-by-instruction at runtime while the program is actively executing. |
-| **Typical output** | A standalone binary executable file containing native machine code (e.g., an ELF binary, Mach-O executable, or `.exe`). | No permanent binary executable file saved on disk; instructions are translated into temporary bytecode/memory operations executed immediately by the interpreter. |
-| **One example** | C / C++ (`gcc` or `clang`), Rust (`rustc`), or Go. | Python (`python3`), Ruby, or PHP. |
-| **One advantage** | Maximum runtime execution speed and performance optimization, along with detecting syntax and type errors before any user runs the code. | Immediate developer feedback loop with zero compile delays, highly interactive debugging, and code portability across platforms that have the interpreter installed. |
+| **When translation / execution happens** | Translates the entire code file all at once before the program starts running. | Translates and runs the code line by line while the program is actively executing. |
+| **Typical output** | Creates a standalone executable binary file (like a `.exe` or app file) that can run on its own. | Does not create a standalone executable file on disk; it executes statements directly in memory. |
+| **One example** | C, C++, or Go. | Python, Ruby, or JavaScript. |
+| **One advantage** | The program runs much faster because all translation is already finished ahead of time. | Much easier and faster for testing and debugging because you can make changes and run them right away without waiting to compile. |
 
 #### Difference between a compiler and an interpreter:
-A compiler translates an entire source code file into native machine instructions all at once before the program is ever launched, producing a standalone executable file that the CPU runs directly. In contrast, an interpreter reads and evaluates source code statements line by line while the application is active, executing the logic dynamically without generating a separate binary on disk. Because compiled binaries talk directly to the processor hardware, they run significantly faster and do not require developer tools installed on the end-user's computer. Interpreters, however, make programming and testing far quicker because you can alter code and run it instantly without waiting for a lengthy compilation step, making them ideal for scripting, experimentation, and rapid software development.
+A compiler translates the entire source code of a program into computer machine code all at once before you ever run it, creating a separate executable file. An interpreter, on the other hand, reads your code line by line and carries out each instruction as it goes. Because compiled programs are already in machine code, they run much faster and don't require the original code to be opened. But interpreted languages like Python make learning and writing code much friendlier because you can test small changes immediately without waiting for a build step.
 
 ---
 
 ## 3. Commands / tools used
-- `python3 mission-04-programs/hello.py`: Ran the Python 3 interpreter against the source script.
-- `cat`: Verified file contents prior to execution.
-- Text editor: Created and formatted the Python script and mission documentation.
+- `python3 mission-04-programs/hello.py`: Ran the Python script from the terminal.
+- Text editor: Used to write the code and fill in notes.
 
 ## 4. My understanding
-Computers and processors can only understand binary electrical instructions (machine code). Because human beings cannot easily write millions of raw binary bits, we write code in high-level languages like Python, C, or Rust. Compilers do all the translation work upfront so the computer gets raw machine code ready for top speed, while interpreters act like a real-time translator sitting between our code and the processor. I also learned that modern Python actually uses a hybrid approach: CPython compiles `.py` files into intermediate bytecode (`.pyc`), and the Python Virtual Machine (PVM) interprets that bytecode at runtime.
+Computers only understand 0s and 1s, so they cannot read English words like `print` directly. Compilers and interpreters are the tools that do the translation work for us. Compilers are like translating an entire book into another language before giving it to someone to read, while interpreters are like a live translator translating what someone says sentence by sentence in real time. Since Python is interpreted, if you make a syntax error on line 10, lines 1 through 9 will still execute until it reaches the mistake.
 
 ## 5. Difficulties faced
-Running Python files using the bare command `python` can sometimes trigger an error or call an outdated Python 2 environment on macOS systems.
+On some computers, typing `python` might give an error or try to run an older version.
 
 ## 6. How I resolved them
-I explicitly used `python3`, ensuring that macOS invokes the modern Python 3.9 interpreter installed on the path.
+I always made sure to type `python3` in the terminal so it uses the modern Python 3 interpreter.
 
 ## 7. Evidence / files
-- `mission-04-programs/hello.py`: Python script displaying `"Hello from Python"`.
-- `mission-04-programs/README.md`: Program execution verification and compiler vs interpreter analysis.
+- `mission-04-programs/hello.py`: Working Python program.
+- `mission-04-programs/README.md`: Comparison table and notes.
 
 ## 8. Commit details
-- **Commit message:** `Compare compilers and interpreters`
-- **Target branch:** `main`
-- **Remote destination:** `https://github.com/Harshiita24/digital-detective-8020`
+- Commit message: `Compare compilers and interpreters`
+- Branch: `main`
+- Remote URL: `https://github.com/Harshiita24/digital-detective-8020`

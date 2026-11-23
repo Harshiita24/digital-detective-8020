@@ -1,14 +1,14 @@
 # Mission 3 — Understand the operating system
 
 ## 1. Task / objective
-The goal of Mission 3 is to explore how the operating system acts as the core supervisor of the computer. This involves inspecting the local OS environment, identifying user identity, measuring storage allocation, observing active running processes, distinguishing between absolute and relative filesystem paths, decoding Unix file permissions, and explaining the fundamental responsibilities of modern operating systems.
+Explore how the operating system manages my laptop. This involved checking system information (OS version, user account, storage space), understanding what processes and PIDs are, learning the difference between absolute and relative paths, reading file permission letters (`rwx`), and explaining the main jobs of an operating system.
 
 ## 2. Work completed
-- Inspected the local operating system environment and documented privacy-safe observations for OS version, user identity, disk space capacity, and system activity.
-- Examined running processes, process identifiers (PIDs), and the difference between user-facing applications and background system daemons.
-- Explored filesystem navigation by comparing absolute paths against relative paths with concrete examples from this repository.
-- Decoded Unix file permission strings (`-rw-r--r--`) on practice files, identifying owner read/write capabilities.
-- Summarized the six major responsibilities of an operating system with clear definitions and everyday examples.
+- Checked my laptop's operating system version, active username, storage usage, and running system activity in the terminal.
+- Looked up what a process and PID mean, with examples of foreground and background programs.
+- Compared absolute paths with relative paths using examples from my assignment folder.
+- Checked the permission letters on `sample.txt` to see what permissions the owner has.
+- Explained the six main responsibilities of an operating system with simple everyday examples.
 
 ---
 
@@ -16,50 +16,52 @@ The goal of Mission 3 is to explore how the operating system acts as the core su
 
 | Information explored | What it tells you | Your observation (privacy-safe) |
 | :--- | :--- | :--- |
-| **Operating system / system details** | Identifies the specific operating system, kernel version, platform architecture, and release build running on the machine. | `macOS 27.2.1` (Build `26B131`), Darwin Kernel Version `27.2.0`, running on an `arm64` 64-bit architecture (Apple Silicon). |
-| **Current account identity** | Displays the short username of the currently logged-in account running the terminal session. | Running under user account `[redacted]` with default shell `/bin/zsh`. |
-| **Available and used storage** | Shows storage volume partitioning, total size, consumed disk space, free space available, and filesystem mount point. | Root data volume `/dev/disk3s5` on `/System/Volumes/Data`: Total size `926 GiB`, Used `177 GiB`, Available `721 GiB` (approx. `20%` capacity used). |
-| **System activity snapshot** | Provides a real-time status of CPU load, active threads, memory pressure, and currently running system services. | Observed multi-core CPU activity with system processes, kernel threads, and GUI window compositing (`WindowServer`) running alongside active apps. |
+| **Operating system / system details** | Tells you which OS is running and what kind of processor the machine has. | Running `macOS` (Version 27.2.1, Darwin Kernel) on an Apple Silicon 64-bit chip (`arm64`). |
+| **Current account identity** | Shows the username of the account currently logged into the terminal. | Logged in as user `[redacted]` using the Zsh shell. |
+| **Available and used storage** | Shows how much storage space is on the drive and how much is free. | Disk partition `/dev/disk3s5`: Total size `926 GiB`, Used `177 GiB`, Free `721 GiB` (about `20%` space used). |
+| **System activity snapshot** | Gives a quick look at CPU usage and running programs. | Observed system tasks and background services running smoothly with low overall CPU load. |
 
 ---
 
 ### Task 3.2 — Understand processes
 
 - **What is a process?**
-  A process is a program in active execution. When an application binary stored on an SSD is launched, the operating system loads its machine instructions into memory, allocates RAM for its variables and stack, sets up file descriptors, and schedules it to run on the CPU.
+  A process is just any program that is actively running on the computer. When you click an app to open it, the computer loads its instructions into RAM, gives it system resources, and it becomes a running process.
 - **What does the PID column represent?**
-  PID stands for **Process Identifier**. It is a unique numerical integer assigned by the operating system kernel to every single process at the moment it is created. The OS and user tools use the PID to track process status, allocate resources, manage parent-child relationships, and send signals (such as pause, resume, or terminate/kill).
-- **Two examples of processes running on this computer:**
-  1. **Application Process:** `Google Chrome` (or `VS Code`) — a user-facing foreground application with interactive windows handling user browsing, rendering tabs, and executing JavaScript.
-  2. **Background System Process:** `WindowServer` (or `launchd`) — an operating system service running continuously in the background that manages display drawing, compositor layers, and window rendering across all monitors.
+  PID stands for **Process ID**. It is a unique identification number that the operating system assigns to every single running program so it can keep track of them, give them CPU time, or shut them down if they freeze.
+- **Two examples of processes running on my laptop:**
+  1. **Google Chrome** (or **VS Code**): An application running in the foreground that I interact with directly.
+  2. **WindowServer**: A background system process that macOS uses to draw windows, buttons, and graphics on the screen.
 
 ---
 
 ### Task 3.3 — Understand paths and permissions
 
 #### Absolute Path vs Relative Path:
-- **Absolute Path:** An absolute path specifies the complete location of a file or folder starting all the way from the root directory (`/`). It is always unambiguous and valid regardless of where the current terminal shell is positioned.
-  - *Example from repository:* `/Users/[redacted]/.../digital-detective-8020/terminal-practice/sample.txt`
-- **Relative Path:** A relative path specifies the location of a target file or folder starting from the **current working directory** where the shell is presently located. It does not begin with a leading forward slash (`/`).
-  - *Example from repository root:* `terminal-practice/sample.txt` (or stepping up from inside a subfolder: `../README.md`).
+- **Absolute Path:** The full, complete address of a file starting from the very root of the computer (`/`). No matter what folder your terminal is currently in, an absolute path always points to the exact same file.
+  - *Example:* `/Users/[redacted]/.../digital-detective-8020/terminal-practice/sample.txt`
+- **Relative Path:** The address of a file based on where your terminal is currently standing. It does not start with a `/`.
+  - *Example:* `terminal-practice/sample.txt` (or `../README.md` to look one folder up).
 
-#### File Permissions Analysis:
-Inspected `sample.txt` inside `terminal-practice/` using `ls -l`:
+#### Understanding File Permissions:
+I checked `sample.txt` with `ls -l` and got:
 ```text
 -rw-r--r--  1 [redacted]  staff  76B Nov 23 09:29 sample.txt
 ```
 
-Breaking down the permission string `-rw-r--r--`:
-- Initial character `-`: Indicates a standard regular file (a directory would start with `d`).
-- First triplet (`rw-`): **Owner permissions**. The owner has **Read** (`r`) and **Write** (`w`) permissions, but not **Execute** (`-`). The owner can open and edit the file, but cannot run it as a program.
-- Second triplet (`r--`): **Group permissions**. Members of the `staff` group have **Read-only** access.
-- Third triplet (`r--`): **Others permissions**. All other users on the system have **Read-only** access.
+Breaking down `-rw-r--r--`:
+- The first dash `-` means it is a regular file (not a folder).
+- The next three letters `rw-` are the **Owner permissions**:
+  - `r` (Read): Yes, I can open and read the file.
+  - `w` (Write): Yes, I can edit and save changes to the file.
+  - `-` (Execute): No, I cannot run it like a program.
+- The remaining letters (`r--r--`) mean group members and other users can only read the file, but cannot edit it.
 
 | Permission | Meaning | Example |
 | :--- | :--- | :--- |
-| **r — Read** | Allows the file contents to be inspected or read into memory. | Opening `sample.txt` in a text editor or reading it with `cat`. |
-| **w — Write** | Allows the file contents to be edited, appended, overwritten, or truncated. | Saving updates to `sample.txt` using `>>` or an editor. |
-| **x — Execute** | Allows the file to be executed as an executable binary or shell script; on directories, allows traversing inside. | Running a compiled program, a bash script, or entering a directory via `cd`. |
+| **r — Read** | Lets you open and view the file's text. | Opening `sample.txt` to read what is written inside. |
+| **w — Write** | Lets you edit, add text, or save changes to the file. | Modifying the file or adding a line with `>>`. |
+| **x — Execute** | Lets you run the file as a program or script. | Running a bash script or Python file from the terminal. |
 
 ---
 
@@ -67,36 +69,35 @@ Breaking down the permission string `-rw-r--r--`:
 
 | OS responsibility | Your explanation | Example |
 | :--- | :--- | :--- |
-| **Process management** | Schedules CPU time among competing programs so that multiple applications appear to run simultaneously without locking the system. | The OS rapidly switches CPU cores between a streaming music player, a code editor, and background downloads without audio stuttering. |
-| **Memory management** | Allocates slices of physical RAM to active programs, isolates memory so apps cannot crash each other, and reclaims space when programs exit. | Allocating 1.2 GB of RAM to a web browser window when opened, and instantly returning that memory to the free pool when closed. |
-| **Device management** | Manages communication between software programs and connected hardware peripherals through standardized device drivers. | Translating mouse sensor coordinates into on-screen cursor movements, or sending formatted raster data to a laser printer. |
-| **File management** | Organizes data on storage drives into an orderly hierarchy of folders and files, handling file creation, deletion, access timestamps, and storage layout. | Tracking where file blocks live on the SSD and preventing two programs from corrupting the same text document simultaneously. |
-| **User interface / shell** | Provides a visual desktop (GUI) or a text-based terminal (CLI) allowing human users to interact with and control the system. | Providing the graphical desktop window manager, menu bars, and the Zsh terminal command shell. |
-| **Security and permissions** | Enforces user authentication, sandboxing, and file access rules to protect system integrity and keep private data safe from unauthorized access. | Prompting for Touch ID or password before installing system-level software, and restricting normal users from modifying root OS binaries. |
+| **Process management** | Decides which running program gets to use the CPU and for how long, switching between them quickly so nothing freezes. | Letting me listen to music in the background while typing code in VS Code without the music pausing. |
+| **Memory management** | Gives chunks of RAM to open apps so they have room to work, and takes it back when an app closes. | Giving 500 MB of RAM to a browser window, and freeing that RAM when I close the tab. |
+| **Device management** | Helps apps talk to hardware like keyboards, mice, screens, and printers using drivers. | Turning my mouse movements into the cursor moving across the screen. |
+| **File management** | Keeps all files and folders organized on the hard drive so data doesn't get lost or corrupted. | Saving my documents into folders and letting me find them easily later. |
+| **User interface / shell** | Gives humans a way to control the computer, either through clickable icons (GUI) or text commands (CLI). | The macOS desktop with the dock and windows, or the Terminal app. |
+| **Security and permissions** | Protects system files and makes sure one user or app cannot mess with another user's private data. | Asking for my password or fingerprint before installing new software. |
 
 ---
 
 ## 3. Commands / tools used
-- `uname -mprsv`: Checked Darwin OS kernel details and hardware architecture.
-- `sw_vers`: Identified macOS product name, version, and build identifier.
-- `whoami`: Verified the currently active user account identity.
-- `df -h .`: Inspected disk filesystem size, consumed storage, and remaining capacity.
-- `ls -l` / `ls -lah`: Inspected file permission strings and decoded permission triplets.
-- `pwd` and `cd`: Tested transitions between relative and absolute directory paths.
+- `uname -mprsv`: Checked my Mac's kernel and processor type.
+- `sw_vers`: Showed macOS version and build number.
+- `whoami`: Displayed my current logged-in user account.
+- `df -h .`: Checked total, used, and free storage on my drive.
+- `ls -l`: Checked file permissions and file sizes.
 
 ## 4. My understanding
-Before this mission, I thought of an operating system simply as the visual screens and icons on my laptop. Digging into processes, storage tables, and permissions made me realize that the OS is essentially a resource manager and gatekeeper. Without it, software programs would collide trying to access the CPU at the exact same time, overwrite each other's RAM, and read each other's private files. Unix permission triplets provide a simple, clean way to ensure that sensitive files are protected while still letting legitimate programs do their work.
+I used to think the operating system was just the desktop background and windows. Doing this mission helped me realize it does all the heavy lifting behind the scenes. Without an operating system, programs wouldn't know how to share the screen, memory, or processor, and would crash into each other. File permissions also make a lot of sense now; they prevent unauthorized apps or users from accidentally overwriting important files.
 
 ## 5. Difficulties faced
-Reading Unix permission strings can look confusing at first because they appear as a string of letters and dashes (`-rw-r--r--`). It was important to remember that the ten characters are divided into one file-type flag followed by three distinct 3-character groups (owner, group, everyone else).
+Looking at the permission string `-rw-r--r--` looked like random letters at first glance.
 
 ## 6. How I resolved them
-I broke the permission string down into chunks: character 1 for type (`-` or `d`), characters 2-4 for user owner (`rw-`), characters 5-7 for group (`r--`), and characters 8-10 for others (`r--`). This made reading permissions mechanical and clear.
+I broke it down into chunks: the first character tells you if it's a file or folder, and then the next 9 characters are split into three sets of three (owner, group, and everyone else). Once I looked at it that way, it was really simple to read.
 
 ## 7. Evidence / files
-- `mission-03-operating-system/README.md`: Completed operating system exploration, process questions, path analysis, permissions guide, and OS responsibilities table.
+- `mission-03-operating-system/README.md`: System specs, process notes, path explanations, and permissions table.
 
 ## 8. Commit details
-- **Commit message:** `Document operating system and file management`
-- **Target branch:** `main`
-- **Remote destination:** `https://github.com/Harshiita24/digital-detective-8020`
+- Commit message: `Document operating system and file management`
+- Branch: `main`
+- Remote URL: `https://github.com/Harshiita24/digital-detective-8020`

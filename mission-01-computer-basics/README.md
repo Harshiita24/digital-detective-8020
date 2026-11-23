@@ -1,27 +1,27 @@
 # Mission 1 — Know your computer
 
 ## 1. Task / objective
-The goal of Mission 1 is to examine how hardware and software work together to form a functioning computer system. This involves breaking down an everyday computing task through the Input-Process-Output-Storage (IPOS) model, categorizing hardware and different tiers of software (system, application, and utility), and analyzing computer-controlled systems used in public everyday environments.
+Understand how a computer takes input, processes it, shows output, and saves data (the IPOS cycle). Also identify different hardware and software that I use, and look at three everyday computer systems around us.
 
 ## 2. Work completed
-- Selected and traced an everyday computing workflow (*writing a Python script in a text editor and saving it*) across all four IPOS stages.
-- Created a hardware and software classification table listing five hardware components and five software programs with their software types and purposes.
-- Identified and analyzed three standalone computer systems encountered in daily life (Metro Ticket Vending Machine, ATM, and Smart Traffic Light Controller), detailing their main purposes, physical inputs, and physical outputs.
+- Picked a common activity I do (writing and saving a Python script) and broke it down into Input, Processing, Output, and Storage.
+- Made a table listing 5 hardware parts and 5 software programs, noting whether each software is an operating system, an application, or a utility.
+- Looked at three real-world computer systems (an ATM, a metro ticket machine, and a traffic light) to see what their purpose, inputs, and outputs are.
 
 ---
 
 ### Task 1.1 — Trace one activity using IPOS
-**Activity:** Writing a Python script in VS Code and saving it to disk.
+**Activity:** Writing a Python program in VS Code and saving it to my laptop.
 
-| Stage | What happens in this activity | Hardware / component involved |
+| Stage | What happens in my example | Hardware / component involved |
 | :--- | :--- | :--- |
-| **Input** | I type lines of Python code on the keyboard. Each keypress generates an electrical interrupt that the keyboard controller sends to the operating system as keycodes. | Built-in laptop keyboard / USB keyboard |
-| **Processing** | The CPU accepts the keyboard interrupts, translates keycodes into text characters using character encoding tables, and stores the edited text buffer in active RAM. The editor checks syntax on the fly. | CPU (Apple Silicon) and System RAM |
-| **Output** | The graphics chip renders the text characters into visual font pixels and displays them instantly in the editor window on the screen so I can read what I am typing. | Liquid Retina Display / GPU |
-| **Storage** | When I press `Cmd + S` (Save), the operating system takes the current text buffer from RAM and writes the file bytes into a persistent folder on the solid-state drive so it remains safe after closing the app or turning off the machine. | Internal NVMe SSD |
+| **Input** | I press keys on the keyboard to type lines of code. | Laptop keyboard |
+| **Processing** | The processor takes my keypresses, turns them into letters, and keeps the text in working memory while I type. | CPU and RAM (Memory) |
+| **Output** | The letters appear on my laptop screen right as I type them so I can see my code. | Laptop screen / display |
+| **Storage** | When I press Cmd + S, the file is saved permanently to my SSD so it stays there even after I close VS Code or turn off the laptop. | Internal SSD (Hard drive) |
 
 #### How the activity moves through the stages:
-The workflow starts the moment physical energy is applied to the keyboard keys (Input). The CPU captures these raw signals, coordinates with the OS to translate them into characters, and keeps the current state in temporary system memory (Processing). While this happens in fractions of a millisecond, the GPU draws each character to the monitor so I get immediate feedback on what was typed (Output). Finally, when I instruct the computer to save, the data transitions from volatile RAM to non-volatile flash memory on the SSD (Storage), ensuring my work is not lost when power is turned off.
+It starts when I press the physical keys on my keyboard (Input). The CPU receives those signals, translates them, and holds the open file in RAM while I work on it (Processing). While this happens, the screen instantly updates so I can see what I am writing (Output). Finally, when I save the file, the computer writes it from temporary RAM into my SSD (Storage), keeping my work safe for later.
 
 ---
 
@@ -29,16 +29,16 @@ The workflow starts the moment physical energy is applied to the keyboard keys (
 
 | Item / software name | Hardware or software? | Software type (if applicable) | Purpose |
 | :--- | :--- | :--- | :--- |
-| Built-in keyboard | Hardware | Not applicable | Captures physical key presses to input text, commands, and shortcuts into the computer. |
-| Retina Display | Hardware | Not applicable | Presents the visual graphical interface, terminal windows, text, and browser pages to the user. |
-| Trackpad | Hardware | Not applicable | Detects fingertip movement and taps to navigate the cursor and trigger system gestures. |
-| Apple M-Series RAM | Hardware | Not applicable | Provides high-speed, volatile temporary workspace for active running applications and operating system data. |
-| Internal NVMe SSD | Hardware | Not applicable | Stores the operating system files, user documents, and installed programs permanently. |
-| macOS | Software | Operating system software | Manages system hardware, schedules CPU tasks, handles memory, and provides access controls and file systems. |
-| Visual Studio Code | Software | Application software | Provides an environment for creating, editing, and managing code files and scripts. |
-| Google Chrome | Software | Application software | Loads web pages, runs web applications, and handles web lookups and documentation. |
-| Terminal | Software | Utility software | Gives direct text-based command-line access to run commands, scripts, and file management tools. |
-| Activity Monitor | Software | Utility software | Displays live CPU, memory, disk, and network resource consumption across running processes to help troubleshoot slow tasks. |
+| Keyboard | Hardware | Not applicable | Used to type text, commands, and numbers into the computer. |
+| Screen / Monitor | Hardware | Not applicable | Displays text, windows, and apps so I can see what I'm doing. |
+| Trackpad / Mouse | Hardware | Not applicable | Lets me point, click, scroll, and select things on the screen. |
+| RAM (Memory) | Hardware | Not applicable | Temporary memory that holds the apps and files I am currently using. |
+| SSD (Storage) | Hardware | Not applicable | Permanent storage where my files, photos, and apps stay saved. |
+| macOS | Software | Operating system software | The main system software that controls the hardware and lets me run apps. |
+| VS Code | Software | Application software | Code editor I use to write and edit Python scripts. |
+| Google Chrome | Software | Application software | Web browser used to search for help, watch videos, and read docs. |
+| Terminal | Software | Utility software | A command line tool used to type commands directly to the computer. |
+| Activity Monitor | Software | Utility software | A built-in tool that shows how much CPU and memory my apps are using. |
 
 ---
 
@@ -46,31 +46,29 @@ The workflow starts the moment physical energy is applied to the keyboard keys (
 
 | System | Main purpose | One input | One output |
 | :--- | :--- | :--- | :--- |
-| **Automated Teller Machine (ATM)** | Authenticates bank customers and dispenses cash securely from their accounts. | Numeric PIN keypad or debit card chip reader. | Mechanical cash dispenser slot or printed paper transaction receipt. |
-| **Metro Ticket Vending Machine (TVM)** | Allows passengers to select transit destinations and purchase journey tokens or recharge smart cards. | Touchscreen destination button or UPI QR code scanner. | Dispensed RFID travel token / printed QR slip and fare display screen. |
-| **Intelligent Traffic Signal** | Coordinates vehicular traffic flow at a road intersection using timers and sensor loops. | Inductive metal loop detector embedded under the road asphalt (detects vehicle presence). | Colored red, amber, and green LED light panels facing the road lanes. |
+| **ATM (Cash Machine)** | Lets bank customers withdraw cash and check balance safely. | Number keypad to type PIN, or card slot. | Cash dispenser slot or printed mini-statement slip. |
+| **Metro Ticket Vending Machine** | Lets passengers buy journey tokens or recharge metro cards. | Touchscreen to select station, or cash/UPI scanner. | Dispensed token / QR ticket slip and the touch display. |
+| **Traffic Light System** | Controls vehicle traffic at road intersections so cars don't crash. | Timer or road sensor that detects waiting cars. | Red, yellow, and green lights facing the drivers. |
 
 ---
 
 ## 3. Commands / tools used
-- Text editor (VS Code) to draft tables and notes.
-- Terminal commands (`sw_vers`, `uname -mprsv`) to verify local hardware architecture while documenting hardware components.
+- Text editor (VS Code) to write down notes and tables.
+- Terminal commands (`sw_vers`) to check my laptop details while writing hardware notes.
 
 ## 4. My understanding
-A computer is not just a single smart box; it is an integrated chain of hardware modules directed by software. The IPOS model helped me see how everyday actions follow a strict cycle: without input there is nothing to compute, without processing input remains raw electrical noise, without output a user has no way to confirm what the computer did, and without storage all results vanish the second power drops.
-
-I also learned how software falls into different levels: the operating system acts as the underlying foundation controlling access to hardware, applications allow users to do productive work like browsing or coding, and utilities keep the system healthy, monitored, and organized.
+Before this, I never really thought about what happens between pressing a key and seeing it on screen. The IPOS model showed me that even simple things like writing one line of code involve the keyboard, processor, RAM, screen, and SSD working together. I also learned the difference between software types: the operating system runs the whole machine, application software helps me do tasks like browsing or writing code, and utilities help monitor or manage the system.
 
 ## 5. Difficulties faced
-When looking at everyday systems like traffic lights or ticket dispensers, it is easy to forget they are full computers with microcontrollers, memory, inputs, and outputs rather than simple mechanical switches.
+It was a bit tricky at first to think of traffic lights or ticket machines as computers because they don't look like laptops.
 
 ## 6. How I resolved them
-I broke each everyday machine down by asking: "Where does it get information?" (sensors, keypads), "Where does it make decisions?" (embedded processor/controller), and "What physical action or display results?" (LEDs, motors, screens).
+I thought about how they work inside: they have a small computer chip, they take inputs from buttons or sensors, make decisions based on programmed rules, and give outputs like lights or tickets.
 
 ## 7. Evidence / files
-- `mission-01-computer-basics/README.md`: Completed IPOS, hardware/software, and everyday computer system tables.
+- `mission-01-computer-basics/README.md`: Notes, IPOS table, hardware/software list, and everyday systems.
 
 ## 8. Commit details
-- **Commit message:** `Complete computer basics and IPOS mission`
-- **Target branch:** `main`
-- **Remote destination:** `https://github.com/Harshiita24/digital-detective-8020`
+- Commit message: `Complete computer basics and IPOS mission`
+- Branch: `main`
+- Remote URL: `https://github.com/Harshiita24/digital-detective-8020`

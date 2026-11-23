@@ -1,7 +1,7 @@
 # The Digital Detective: Explore Your Computer & Build a Mini System Report
 **Diwali Independent Learning Assignment**
 
-An investigative, hands-on computer systems study exploring hardware-software interaction, terminal workflows, operating system internals, program execution, number systems, Git version control, and computer networking.
+A hands-on exploration of how personal computers work, from hardware and terminal commands to operating systems, Python scripts, binary numbers, Git, and networking.
 
 ---
 
@@ -18,32 +18,32 @@ An investigative, hands-on computer systems study exploring hardware-software in
 
 ---
 
-## Assignment Overview
+## About This Assignment
 
-This project documents a systematic investigation into the inner workings of personal computers and Unix-like operating systems. Completed as a sequence of nine focused missions, each section explores a core computing concept through direct terminal commands, manual arithmetic, code execution, and system observations.
+This assignment is a series of 9 missions to investigate how my computer works under the hood. Instead of just clicking through graphical menus, I used the terminal to inspect system hardware, manage files, monitor running processes, test Python code, convert between number bases, collaborate with Git and GitHub, and see how computers talk over a network.
 
-Every mission has been researched, verified on my own machine, documented with observations, and committed separately to record an authentic progression of learning.
+Every mission was completed individually, verified on my own laptop, and saved with its own dedicated Git commit to show my progress step by step.
 
 ---
 
 ## My Learning
 
-Working through these hands-on missions provided several practical insights into computer architecture and everyday developer workflows:
-1. **The IPOS Cycle in Action:** Tracing a task like code editing highlighted how input devices, CPU scheduling, GPU rendering, and SSD non-volatile storage pass data back and forth seamlessly.
-2. **Terminal Fluency and Precision:** Using command-line tools (`pwd`, `ls -lah`, `cp`, `mv`, and pipes like `| head -n 5`) proved much faster than GUI clicking and revealed how Unix programs chain inputs and outputs together cleanly.
-3. **Number Systems and Encoding:** Performing manual binary, decimal, and hexadecimal conversions clarified how computers structure raw memory into 4-bit nibbles and 8-bit bytes, and why standards like UTF-8 are essential for global text representation.
+Working through these missions helped me understand practical concepts that usually feel abstract:
+1. **How the Computer Handles Actions (IPOS):** Breaking down code editing showed me how pressing a key travels from the keyboard to the CPU and RAM, displays immediately on the screen, and gets saved permanently to the SSD.
+2. **Terminal Navigation:** I got comfortable typing commands like `pwd`, `ls -lah`, `cp`, `mv`, and using pipes (`|`) to view output. It felt faster and more precise than clicking around in a file manager.
+3. **Numbers and Text in Memory:** Working through binary and hexadecimal conversions by hand helped me see that computers really only store 0s and 1s, and standards like ASCII and UTF-8 are what let us turn those numbers into readable letters and symbols.
 
 ---
 
 ## Topics Explored
 
-- **Computer Fundamentals & Architecture:** The Input-Process-Output-Storage (IPOS) model, hardware components (CPU, RAM, SSD, GPU), and software classification (system, application, utility).
-- **Terminal & Command-Line Fluency:** Directory navigation, safe file manipulation, output redirection (`>` vs `>>`), flags (`ls -lah`), Unix pipelines (`|`), and package managers (Homebrew).
-- **Operating System Internals:** Kernel inspection, user identity, filesystem mounts (`df -h`), process management (PIDs), relative vs absolute paths, and Unix permission triplets (`rwx`).
-- **Program Execution:** How source code runs, compiler ahead-of-time (AOT) machine code vs interpreter runtime evaluation, and Python script execution.
-- **Data Representation & Text Encoding:** Decimal, binary, and hexadecimal arithmetic conversions, Python verification functions (`bin()`, `hex()`, `int()`), and character encoding standards (ASCII vs UTF-8).
-- **Version Control & Collaboration:** Git workflow (`status`, `add`, `commit`, `log`), feature branching, GitHub Pull Requests, and code review lifecycles.
-- **Computer Networking:** Network scopes (LAN, MAN, WAN), protocols (TCP/IP, HTTP/HTTPS, DNS), packet switching, client-server architecture, and live network diagnostics (`ping`, `nslookup`).
+- **Computer Basics:** The Input-Process-Output-Storage (IPOS) cycle, hardware components, and software categories (system, application, utility).
+- **Terminal Practice:** Essential file and folder commands, writing vs appending text (`>` vs `>>`), command flags, pipes (`|`), and package managers (Homebrew).
+- **Operating Systems:** System details, checking disk space (`df -h`), running processes and PIDs, relative vs absolute paths, and file permissions (`rwx`).
+- **Programs & Execution:** Running a Python program from the terminal and comparing how compilers and interpreters work.
+- **Numbers & Data:** Converting between decimal, binary, and hexadecimal by hand and with Python, plus how ASCII and UTF-8 store text.
+- **Git & GitHub:** Making commits, working on a separate branch (`update-about`), opening and merging a Pull Request, and pulling updates back to my computer.
+- **Computer Networks:** Network types (LAN, MAN, WAN), network concepts (DNS, routers, protocols, packet switching, client-server), running `ping` and `nslookup`, and how websites load.
 
 ---
 
@@ -61,40 +61,35 @@ Working through these hands-on missions provided several practical insights into
 | **7** | Computer networking, DNS lookup, and web communication | Completed | [mission-07-networking/](mission-07-networking/README.md) |
 | **8** | Final review, verification, and submission checklist | Completed | [mission-08-final-report/](mission-08-final-report/README.md) |
 
-*Note: In accordance with assignment instructions, each mission was completed, documented, and committed separately with a dedicated, descriptive Git commit message.*
+*(Note: Following the assignment rules, each mission has its own dedicated commit in Git history.)*
 
 ---
 
-## Instructions for Running the Number Converter
+## How to Run the Number Converter
 
-The repository includes an interactive Python number conversion utility in `mission-05-numbers-data/number_converter.py`.
+Inside the `mission-05-numbers-data/` folder, there is a small Python program that takes a decimal number and converts it to binary and hexadecimal.
 
-### How to Run:
-1. Open your terminal and navigate into the `mission-05-numbers-data` folder:
+### Steps to run:
+1. Open your terminal and change into the mission 5 folder:
    ```bash
    cd mission-05-numbers-data
    ```
-2. Execute the script using Python 3:
+2. Run the script using Python 3:
    ```bash
    python3 number_converter.py
    ```
-3. When prompted, enter any positive decimal integer (e.g. `42`):
+3. Enter any positive number when prompted (for example: `42`):
    ```text
-   ==========================================
-      Digital Detective: Number Converter    
-   ==========================================
-   Enter a positive decimal integer: 42
-
-   --- Conversion Results ---
-   Decimal (Base 10):     42
-   Binary (Base 2):       101010  (Prefix notation: 0b101010)
-   Hexadecimal (Base 16): 2A  (Prefix notation: 0x2a)
-   ==========================================
+   --- Number Converter ---
+   Enter a positive decimal number: 42
+   Decimal:     42
+   Binary:      0b101010
+   Hexadecimal: 0x2a
    ```
 
 ---
 
-## Workspace Structure
+## Folder Structure
 
 ```text
 digital-detective-8020/
@@ -128,11 +123,11 @@ digital-detective-8020/
 
 ---
 
-## Development Environment & Prerequisites
+## Tools & Environment
 
-- **Operating System:** macOS (Darwin arm64)
+- **Operating System:** macOS (Apple Silicon arm64)
 - **Shell:** Zsh (`/bin/zsh`)
-- **Python Version:** Python 3.9.6
-- **Git Version:** git version 2.54.0 (Apple Git-157)
+- **Python:** Python 3.9.6
+- **Git:** git version 2.54.0
 - **Package Manager:** Homebrew 7.0.12
-- **Text Editor:** VS Code / Terminal CLI
+- **Editor:** VS Code / Terminal
