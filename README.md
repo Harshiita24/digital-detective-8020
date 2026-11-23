@@ -26,6 +26,15 @@ Every mission has been researched, verified on my own machine, documented with o
 
 ---
 
+## My Learning
+
+Working through these hands-on missions provided several practical insights into computer architecture and everyday developer workflows:
+1. **The IPOS Cycle in Action:** Tracing a task like code editing highlighted how input devices, CPU scheduling, GPU rendering, and SSD non-volatile storage pass data back and forth seamlessly.
+2. **Terminal Fluency and Precision:** Using command-line tools (`pwd`, `ls -lah`, `cp`, `mv`, and pipes like `| head -n 5`) proved much faster than GUI clicking and revealed how Unix programs chain inputs and outputs together cleanly.
+3. **Number Systems and Encoding:** Performing manual binary, decimal, and hexadecimal conversions clarified how computers structure raw memory into 4-bit nibbles and 8-bit bytes, and why standards like UTF-8 are essential for global text representation.
+
+---
+
 ## Mission Index
 
 | Mission | Focus Area | Status | Folder / Report |
