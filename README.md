@@ -34,8 +34,8 @@ Every mission has been researched, verified on my own machine, documented with o
 | **1** | Computer fundamentals and IPOS model | Completed | [mission-01-computer-basics/](mission-01-computer-basics/README.md) |
 | **2** | Terminal operations, flags, and file management | Completed | [mission-02-terminal/](mission-02-terminal/README.md) |
 | **3** | Operating system internals, processes, and permissions | Completed | [mission-03-operating-system/](mission-03-operating-system/README.md) |
-| **4** | Program execution, compilers, and interpreters | In Progress | [mission-04-programs/](mission-04-programs/README.md) |
-| **5** | Number systems, Python verification, and text encoding | Pending | [mission-05-numbers-data/](mission-05-numbers-data/README.md) |
+| **4** | Program execution, compilers, and interpreters | Completed | [mission-04-programs/](mission-04-programs/README.md) |
+| **5** | Number systems, Python verification, and text encoding | In Progress | [mission-05-numbers-data/](mission-05-numbers-data/README.md) |
 | **6** | Git collaboration, branching, and pull requests | Pending | [mission-06-git-github/](mission-06-git-github/README.md) |
 | **7** | Computer networking, DNS lookup, and web communication | Pending | [mission-07-networking/](mission-07-networking/README.md) |
 | **8** | Final review, verification, and submission checklist | Pending | [mission-08-final-report/](mission-08-final-report/README.md) |
