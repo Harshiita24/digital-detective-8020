@@ -1,7 +1,7 @@
 # Mission 4 — How programs run
 
 ## 1. Task / objective
-Understand how code written by humans actually runs on a computer. This involved making a simple Python script named `hello.py`, running it from the terminal, and comparing the difference between a compiler and an interpreter.
+Create and run `hello.py`, then compare compilers and interpreters.
 
 ## 2. Work completed
 - Created a one-line Python script called `hello.py` inside `mission-04-programs/` that prints `"Hello from Python"`.
@@ -38,7 +38,7 @@ Understand how code written by humans actually runs on a computer. This involved
 | **One advantage** | The program runs much faster because all translation is already finished ahead of time. | Much easier and faster for testing and debugging because you can make changes and run them right away without waiting to compile. |
 
 #### Difference between a compiler and an interpreter:
-A compiler translates the entire source code of a program into computer machine code all at once before you ever run it, creating a separate executable file. An interpreter, on the other hand, reads your code line by line and carries out each instruction as it goes. Because compiled programs are already in machine code, they run much faster and don't require the original code to be opened. But interpreted languages like Python make learning and writing code much friendlier because you can test small changes immediately without waiting for a build step.
+A compiler translates source code before it runs, often producing an executable. An interpreter runs code through a runtime. Compiled programs can run efficiently, while interpreted workflows make it easy to try changes quickly.
 
 ---
 
@@ -47,13 +47,13 @@ A compiler translates the entire source code of a program into computer machine 
 - Text editor: Used to write the code and fill in notes.
 
 ## 4. My understanding
-Computers only understand 0s and 1s, so they cannot read English words like `print` directly. Compilers and interpreters are the tools that do the translation work for us. Compilers are like translating an entire book into another language before giving it to someone to read, while interpreters are like a live translator translating what someone says sentence by sentence in real time. Since Python is interpreted, if you make a syntax error on line 10, lines 1 through 9 will still execute until it reaches the mistake.
+Compilers translate code before execution; interpreters run it through a runtime. Python lets me test changes quickly. A syntax error prevents the script from starting, while a runtime error can happen after earlier lines have run.
 
 ## 5. Difficulties faced
-On some computers, typing `python` might give an error or try to run an older version.
+The `python` command may be missing or point to an older version on some computers.
 
 ## 6. How I resolved them
-I always made sure to type `python3` in the terminal so it uses the modern Python 3 interpreter.
+I used `python3` to run the script with Python 3.
 
 ## 7. Evidence / files
 - `mission-04-programs/hello.py`: Working Python program.

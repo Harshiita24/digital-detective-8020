@@ -1,7 +1,7 @@
-# The Digital Detective: Explore Your Computer & Build a Mini System Report
+# The Digital Detective
 **Diwali Independent Learning Assignment**
 
-A hands-on exploration of how personal computers work, from hardware and terminal commands to operating systems, Python scripts, binary numbers, Git, and networking.
+My notes and practice from nine missions covering computer basics, the terminal, Python, Git, and networking.
 
 ---
 
@@ -20,30 +20,27 @@ A hands-on exploration of how personal computers work, from hardware and termina
 
 ## About This Assignment
 
-This assignment is a series of 9 missions to investigate how my computer works under the hood. Instead of just clicking through graphical menus, I used the terminal to inspect system hardware, manage files, monitor running processes, test Python code, convert between number bases, collaborate with Git and GitHub, and see how computers talk over a network.
-
-Every mission was completed individually, verified on my own laptop, and saved with its own dedicated Git commit to show my progress step by step.
+I explored my laptop through nine missions: checking hardware, managing files, running Python, converting numbers, using Git, and testing network commands. Each mission has its own report and Git commit.
 
 ---
 
 ## My Learning
 
-Working through these missions helped me understand practical concepts that usually feel abstract:
-1. **How the Computer Handles Actions (IPOS):** Breaking down code editing showed me how pressing a key travels from the keyboard to the CPU and RAM, displays immediately on the screen, and gets saved permanently to the SSD.
-2. **Terminal Navigation:** I got comfortable typing commands like `pwd`, `ls -lah`, `cp`, `mv`, and using pipes (`|`) to view output. It felt faster and more precise than clicking around in a file manager.
-3. **Numbers and Text in Memory:** Working through binary and hexadecimal conversions by hand helped me see that computers really only store 0s and 1s, and standards like ASCII and UTF-8 are what let us turn those numbers into readable letters and symbols.
+1. **Computer basics:** Typing and saving code connects the keyboard, CPU, RAM, screen, and SSD.
+2. **Terminal:** I practiced commands such as `pwd`, `ls -lah`, `cp`, and `mv`, plus pipes (`|`).
+3. **Data:** Binary and hex conversions helped me understand how numbers are stored. ASCII and UTF-8 explain how numbers represent text.
 
 ---
 
 ## Topics Explored
 
-- **Computer Basics:** The Input-Process-Output-Storage (IPOS) cycle, hardware components, and software categories (system, application, utility).
-- **Terminal Practice:** Essential file and folder commands, writing vs appending text (`>` vs `>>`), command flags, pipes (`|`), and package managers (Homebrew).
-- **Operating Systems:** System details, checking disk space (`df -h`), running processes and PIDs, relative vs absolute paths, and file permissions (`rwx`).
-- **Programs & Execution:** Running a Python program from the terminal and comparing how compilers and interpreters work.
-- **Numbers & Data:** Converting between decimal, binary, and hexadecimal by hand and with Python, plus how ASCII and UTF-8 store text.
-- **Git & GitHub:** Making commits, working on a separate branch (`update-about`), opening and merging a Pull Request, and pulling updates back to my computer.
-- **Computer Networks:** Network types (LAN, MAN, WAN), network concepts (DNS, routers, protocols, packet switching, client-server), running `ping` and `nslookup`, and how websites load.
+- **Computer basics:** IPOS, hardware, and types of software.
+- **Terminal:** Files, flags, `>` vs `>>`, pipes, and Homebrew.
+- **Operating systems:** System details, disk space, processes, PIDs, paths, and `rwx` permissions.
+- **Programs:** Running Python and comparing compilers with interpreters.
+- **Data:** Decimal, binary, hex, ASCII, and UTF-8.
+- **Git:** Commits, the `update-about` branch, pull requests, merging, and pulling.
+- **Networks:** LAN, MAN, WAN, DNS, routers, protocols, packets, client-server, `ping`, and `nslookup`.
 
 ---
 
@@ -91,34 +88,22 @@ Inside the `mission-05-numbers-data/` folder, there is a small Python program th
 
 ## Folder Structure
 
+Each mission folder has a `README.md` with its report. Here is where everything lives:
+
 ```text
 digital-detective-8020/
-├── README.md
-├── evidence/
-│   └── .gitkeep
-├── mission-00-setup/
-│   └── README.md
-├── mission-01-computer-basics/
-│   └── README.md
-├── mission-02-terminal/
-│   └── README.md
-├── mission-03-operating-system/
-│   └── README.md
-├── mission-04-programs/
-│   ├── hello.py
-│   └── README.md
-├── mission-05-numbers-data/
-│   ├── number_converter.py
-│   └── README.md
-├── mission-06-git-github/
-│   └── README.md
-├── mission-07-networking/
-│   └── README.md
-├── mission-08-final-report/
-│   └── README.md
-└── terminal-practice/
-    ├── sample-renamed.txt
-    └── sample.txt
+├── README.md                     # Start here
+├── evidence/                     # Evidence folder (.gitkeep)
+├── mission-00-setup/              # Project setup
+├── mission-01-computer-basics/    # Hardware, software, and IPOS
+├── mission-02-terminal/           # Terminal practice
+├── mission-03-operating-system/   # Processes, paths, and permissions
+├── mission-04-programs/           # Program notes and hello.py
+├── mission-05-numbers-data/       # Number notes and number_converter.py
+├── mission-06-git-github/         # Git workflow and glossary
+├── mission-07-networking/         # Network notes and command results
+├── mission-08-final-report/       # Final review and checklist
+└── terminal-practice/             # sample.txt and sample-renamed.txt
 ```
 
 ---

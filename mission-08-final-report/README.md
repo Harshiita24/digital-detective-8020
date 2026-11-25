@@ -1,7 +1,7 @@
 # Mission 8 — Final report and submission
 
 ## 1. Task / objective
-Do a final review of the whole assignment repository before submitting it. This involved checking that every mission folder has its own `README.md` using the required sections, verifying that `hello.py` and `number_converter.py` run without errors, confirming all commits are pushed to GitHub, checking that the branch and Pull Request are visible, making sure no personal private data is exposed, and updating the main project `README.md`.
+Review all mission reports and required headings, test both Python scripts, check GitHub commits and the PR, check for private details, and finish the main README.
 
 ## 2. Work completed
 - Checked all 9 mission folders and made sure every folder contains its complete `README.md`.
@@ -55,13 +55,13 @@ Do a final review of the whole assignment repository before submitting it. This 
 - GitHub web interface: Checked repository visibility, branch history, and merged PR status.
 
 ## 4. My understanding
-Doing this assignment helped connect the dots between how hardware and software actually work together. Before, I only used my laptop to click around and open apps. Now I know how to navigate folders and manage files using the terminal, how the operating system shares CPU and memory between running processes, how binary numbers and ASCII represent data, and how my computer talks to servers across the internet. Using Git and GitHub also taught me how to save checkpoints of my work and test changes on a branch safely.
+This assignment connected hardware, software, and everyday computer tasks. I practiced terminal commands, learned about processes and data representation, explored networking, and used Git to track my work.
 
 ## 5. Difficulties faced
-Checking through all 9 mission folders to make sure no section heading was left empty took some careful review.
+Checking all nine reports for missing sections took careful review.
 
 ## 6. How I resolved them
-I went through each mission folder one by one comparing them against the assignment guide to make sure all 8 required headings were filled in and easy to read.
+I compared each report with the assignment guide and checked that all eight required sections were filled in.
 
 ## 7. Evidence / files
 - Repository URL: `https://github.com/Harshiita24/digital-detective-8020`

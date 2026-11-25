@@ -1,7 +1,7 @@
 # Mission 6 — Git and GitHub
 
 ## 1. Task / objective
-Learn how Git tracks changes to code and how GitHub helps people work together. This involved practicing `git status`, `git add`, `git commit`, and `git log`, creating a new branch called `update-about`, updating the root README on that branch, making a Pull Request on GitHub, merging it, pulling the changes back to my laptop, and writing a short glossary of Git commands.
+Practice Git commands, create the `update-about` branch, update the README, merge a pull request, and pull the changes locally. Write a short Git glossary.
 
 ## 2. Work completed
 - Checked repository status and learned what staging (`git add`) and committing (`git commit`) actually do.
@@ -24,7 +24,7 @@ Learn how Git tracks changes to code and how GitHub helps people work together. 
 | **View commit history** (`git log`) | Shows the list of past commits, who made them, when they were made, and their commit messages. |
 
 #### Difference between staging a change and committing it:
-Staging (`git add`) is like putting items into a shopping cart before paying. You get to pick and choose exactly which changed files belong together. Committing (`git commit`) is checking out and paying—it seals the transaction, saves the snapshot permanently into Git history, and gives it a timestamp and ID.
+Staging (`git add`) selects changes for the next commit. Committing (`git commit`) saves those staged changes as a snapshot with a message and an ID.
 
 ---
 
@@ -58,9 +58,9 @@ Staging (`git add`) is like putting items into a shopping cart before paying. Yo
    ```
 
 #### Why branches and Pull Requests are useful:
-A **branch** lets you work on a new feature or experiment on the side without breaking the working code on the `main` branch. If something goes wrong, your main project is still completely fine.
+A **branch** lets me work on changes separately before merging them into `main`.
 
-A **Pull Request (PR)** lets other people on the team look at your changes before they get merged into the main code. They can review your code, point out bugs or typos, test it, and make sure everything is working properly before hitting the merge button.
+A **Pull Request (PR)** lets others review, discuss, and test changes before they are merged.
 
 ---
 
@@ -88,13 +88,13 @@ A **Pull Request (PR)** lets other people on the team look at your changes befor
 - `git checkout main` and `git pull origin main`: Pulled the merged changes back down to my laptop.
 
 ## 4. My understanding
-Before this, I thought Git and GitHub were the same thing. Now I understand that Git is the program running on my computer that tracks changes, while GitHub is a website that hosts the project online so others can see it or collaborate. Using branches and pull requests showed me how real software teams build features safely without accidentally overwriting each other's work.
+Git tracks changes on my computer. GitHub hosts the repository online. Branches let me work separately, and pull requests let people review changes before merging them.
 
 ## 5. Difficulties faced
-It was easy to forget to run `git pull` after merging the PR online.
+It was easy to forget to pull the changes after merging the PR on GitHub.
 
 ## 6. How I resolved them
-As soon as the PR merged on GitHub, I immediately switched back to `main` in my terminal and ran `git pull origin main` to make sure my laptop's files matched what was on GitHub.
+I switched to `main` and ran `git pull origin main` after the merge.
 
 ## 7. Evidence / files
 - Feature branch: `update-about`

@@ -1,7 +1,7 @@
 # Mission 0 — Create your GitHub workspace
 
 ## 1. Task / objective
-Set up my project workspace for the assignment. This meant picking the right repository name using my USN (`digital-detective-8020`), making all the mission folders, checking that Python 3 and Git are installed on my laptop, and connecting my local folder to GitHub.
+Set up `digital-detective-8020`, create the mission folders, check Python and Git, and connect the project to GitHub.
 
 ## 2. Work completed
 - Named the project folder `digital-detective-8020` following the assignment rule (assignment name + hyphen + last 4 digits of my USN `2402608020`).
@@ -19,13 +19,13 @@ Set up my project workspace for the assignment. This meant picking the right rep
 - `mkdir`: Created all the mission folders from the terminal.
 
 ## 4. My understanding
-A Git repository is basically a project folder with a built-in history tracker. Instead of saving multiple versions of files with names like "final_v2", Git takes snapshots of my work whenever I commit. Organizing the assignment into separate mission folders makes it much easier to find things. Each topic has its own place, so my terminal practice doesn't get mixed up with my Python programs or network notes.
+Git keeps a history of my project through commits. Separate mission folders help me find my notes, programs, and practice files.
 
 ## 5. Difficulties faced
-At first, I had to make sure I got the folder name right with lowercase letters and hyphens so it matched the GitHub repository name. I also wanted to make sure I didn't create a default README on GitHub while creating the repository online, because that would cause a conflict when pushing from my computer.
+I needed to match the required folder name and avoid a conflicting README on GitHub.
 
 ## 6. How I resolved them
-I double checked the assignment naming instructions before creating the folder. When creating the repository on GitHub, I left the boxes for adding a README and license unchecked, so my local setup pushed smoothly without any conflicts.
+I checked the naming rules and created an empty GitHub repository without a README or license.
 
 ## 7. Evidence / files
 - Root file: `README.md`

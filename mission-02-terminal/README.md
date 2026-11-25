@@ -1,7 +1,7 @@
 # Mission 2 — Become comfortable with the Terminal
 
 ## 1. Task / objective
-Get used to using the Terminal instead of just clicking around with a mouse. This involved practicing basic file commands (`pwd`, `ls`, `cd`, `mkdir`, `touch`, `cp`, `mv`, `cat`), trying out file changes safely in a practice folder, seeing how command flags work, using a pipe (`|`) to send output from one command into another, and learning what a package manager does.
+Practice file commands, writing and appending text, flags, pipes, and package managers in the terminal.
 
 ## 2. Work completed
 - Practiced nine fundamental terminal commands inside the assignment folder and wrote down what each command did and what I saw on screen.
@@ -87,7 +87,7 @@ Inside the `terminal-practice/` folder, I created `sample.txt` and tested writin
 - **Packages managed:** It manages developer tools on my laptop like `git`, `python@3.10`, `curl`, `ffmpeg`, and `sqlite`.
 
 #### Why package managers are useful:
-A package manager is basically like an App Store for the command line. Instead of having to search online for software, download DMG files, click through installers, and worry about missing dependencies, you just type `brew install <tool>` and it downloads and sets up everything for you. It also makes updating all your installed tools really easy with a single update command.
+A package manager installs and updates tools and their dependencies. For example, `brew install <tool>` installs a tool through Homebrew.
 
 ---
 
@@ -98,13 +98,13 @@ A package manager is basically like an App Store for the command line. Instead o
 - `brew --version` and `brew list` to inspect Homebrew.
 
 ## 4. My understanding
-At first the terminal felt intimidating because there are no buttons to click and you have to type everything. But once you practice the basic commands, it is actually much faster than using a mouse. I also learned that small mistakes like typing `>` instead of `>>` can delete an entire file, so it's always good to test things in a separate practice folder first.
+The terminal became easier with practice. I learned that `>` replaces file contents, while `>>` adds to them, so I used a separate practice folder.
 
 ## 5. Difficulties faced
-When I first tried adding a second line of text, I accidentally used `>` instead of `>>`, which overwrote my first line.
+I used `>` instead of `>>` when adding a second line and overwrote the first line.
 
 ## 6. How I resolved them
-I checked the file with `cat sample.txt`, saw that line 1 was missing, and re-did it carefully using `>>` to make sure both lines stayed in the file.
+I checked the file with `cat sample.txt` and added the lines again using `>>` for the second line.
 
 ## 7. Evidence / files
 - `mission-02-terminal/README.md`: Terminal notes, questions, and observations.

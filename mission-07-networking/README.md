@@ -1,7 +1,7 @@
 # Mission 7 — How computers communicate
 
 ## 1. Task / objective
-Understand basic computer networking and how websites work. This meant explaining common network terms (LAN, MAN, WAN, DNS, router, protocol, packet switching, client-server), running `ping` and `nslookup` commands from the terminal to see real network communication, and writing down a 5 to 7 step explanation of what happens when you open a website in a browser.
+Explain common network terms, run `ping` and `nslookup`, and describe how a website loads in six steps.
 
 ## 2. Work completed
 - Made a network concepts table explaining eight common networking terms in my own words with practical examples.
@@ -85,13 +85,13 @@ Here is what happens step by step when you open a website:
 - `nslookup example.com`: Looked up the IP address connected to a domain name.
 
 ## 4. My understanding
-Before this mission, I thought the internet was just one giant cloud that answered searches instantly. Seeing how `ping` and `nslookup` work showed me that every website is actually just another computer (a server) located somewhere in the world with its own numeric IP address. DNS is really clever because humans would never be able to memorize random numbers like `172.66.147.243` for every website we visit.
+Servers send website content to browsers over a network. `ping` checks reachability and response time, while `nslookup` shows DNS results. DNS lets me use names instead of remembering IP addresses.
 
 ## 5. Difficulties faced
-When I ran `nslookup`, it showed two different IP addresses for `example.com`, which confused me at first because I thought each name had only one number.
+`nslookup` returned two IP addresses for `example.com`, which surprised me.
 
 ## 6. How I resolved them
-I found out that popular websites often have multiple servers with different IP addresses so that if one server is busy or down, another can handle the traffic.
+I learned that a domain can have multiple IP addresses to help distribute traffic and improve availability.
 
 ## 7. Evidence / files
 - `mission-07-networking/README.md`: Networking concepts table, terminal outputs, and 6-step website explanation.

@@ -1,7 +1,7 @@
 # Mission 5 — Numbers and data
 
 ## 1. Task / objective
-Learn how computers work with numbers and text in memory. This meant converting numbers by hand between decimal (base 10), binary (base 2), and hexadecimal (base 16), checking the math using Python in the terminal, writing a Python program (`number_converter.py`) to convert numbers automatically, and understanding how character encodings like ASCII and UTF-8 store letters.
+Convert decimal, binary, and hexadecimal numbers by hand and check them with Python. Build `number_converter.py` and learn how ASCII and UTF-8 represent text.
 
 ## 2. Work completed
 - Worked out seven number conversion problems step by step on paper and recorded the steps.
@@ -113,13 +113,13 @@ I wrote `number_converter.py` using Python's built-in functions:
 - `python3 mission-05-numbers-data/number_converter.py`: Ran the converter with test numbers.
 
 ## 4. My understanding
-Binary makes total sense once you realize that computer hardware is just millions of tiny switches that can only be either on (1) or off (0). Hexadecimal is really helpful because writing out long lines of 0s and 1s is slow and easy to mess up; since 4 binary bits make exactly 1 hex digit, hex is just a neat shorthand for humans to read binary data. Seeing how ASCII turns 'A' into 65 also helped me understand how text actually sits inside computer memory.
+Binary represents data using 0s and 1s. Each hex digit represents four bits, making long binary values easier to read. Character encodings let computers store and display text as numbers.
 
 ## 5. Difficulties faced
-When doing decimal-to-binary by hand, it was easy to accidentally write the remainder numbers from top to bottom instead of bottom to top.
+I sometimes read binary remainders from top to bottom instead of bottom to top.
 
 ## 6. How I resolved them
-I checked my answer by adding the powers of two back up (like 16 + 8 + 1 = 25). If it didn't add up to my starting number, I knew I had flipped the remainders. Checking with `bin()` in Python confirmed the right order.
+I added the powers of two to check the result, then verified it with `bin()` in Python.
 
 ## 7. Evidence / files
 - `mission-05-numbers-data/number_converter.py`: Python converter program.

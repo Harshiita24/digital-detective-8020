@@ -1,7 +1,7 @@
 # Mission 1 — Know your computer
 
 ## 1. Task / objective
-Understand how a computer takes input, processes it, shows output, and saves data (the IPOS cycle). Also identify different hardware and software that I use, and look at three everyday computer systems around us.
+Use the Input-Process-Output-Storage (IPOS) cycle to explain an everyday activity. Identify hardware, software, and three computer systems around me.
 
 ## 2. Work completed
 - Picked a common activity I do (writing and saving a Python script) and broke it down into Input, Processing, Output, and Storage.
@@ -21,7 +21,7 @@ Understand how a computer takes input, processes it, shows output, and saves dat
 | **Storage** | When I press Cmd + S, the file is saved permanently to my SSD so it stays there even after I close VS Code or turn off the laptop. | Internal SSD (Hard drive) |
 
 #### How the activity moves through the stages:
-It starts when I press the physical keys on my keyboard (Input). The CPU receives those signals, translates them, and holds the open file in RAM while I work on it (Processing). While this happens, the screen instantly updates so I can see what I am writing (Output). Finally, when I save the file, the computer writes it from temporary RAM into my SSD (Storage), keeping my work safe for later.
+Keypresses provide input, the CPU processes them with the text held in RAM, and the screen shows the result. Saving writes the file to the SSD for later use.
 
 ---
 
@@ -57,13 +57,13 @@ It starts when I press the physical keys on my keyboard (Input). The CPU receive
 - Terminal commands (`sw_vers`) to check my laptop details while writing hardware notes.
 
 ## 4. My understanding
-Before this, I never really thought about what happens between pressing a key and seeing it on screen. The IPOS model showed me that even simple things like writing one line of code involve the keyboard, processor, RAM, screen, and SSD working together. I also learned the difference between software types: the operating system runs the whole machine, application software helps me do tasks like browsing or writing code, and utilities help monitor or manage the system.
+Typing and saving code uses the keyboard, CPU, RAM, screen, and SSD together. The OS manages the computer, apps help me do tasks, and utilities help me maintain it.
 
 ## 5. Difficulties faced
-It was a bit tricky at first to think of traffic lights or ticket machines as computers because they don't look like laptops.
+I found it hard to think of traffic lights and ticket machines as computers.
 
 ## 6. How I resolved them
-I thought about how they work inside: they have a small computer chip, they take inputs from buttons or sensors, make decisions based on programmed rules, and give outputs like lights or tickets.
+I looked at their inputs, programmed decisions, and outputs, such as lights or tickets.
 
 ## 7. Evidence / files
 - `mission-01-computer-basics/README.md`: Notes, IPOS table, hardware/software list, and everyday systems.

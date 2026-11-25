@@ -1,7 +1,7 @@
 # Mission 3 — Understand the operating system
 
 ## 1. Task / objective
-Explore how the operating system manages my laptop. This involved checking system information (OS version, user account, storage space), understanding what processes and PIDs are, learning the difference between absolute and relative paths, reading file permission letters (`rwx`), and explaining the main jobs of an operating system.
+Check system details, storage, and processes. Learn about PIDs, paths, file permissions, and the main jobs of an operating system.
 
 ## 2. Work completed
 - Checked my laptop's operating system version, active username, storage usage, and running system activity in the terminal.
@@ -86,13 +86,13 @@ Breaking down `-rw-r--r--`:
 - `ls -l`: Checked file permissions and file sizes.
 
 ## 4. My understanding
-I used to think the operating system was just the desktop background and windows. Doing this mission helped me realize it does all the heavy lifting behind the scenes. Without an operating system, programs wouldn't know how to share the screen, memory, or processor, and would crash into each other. File permissions also make a lot of sense now; they prevent unauthorized apps or users from accidentally overwriting important files.
+The OS shares CPU time and memory between programs, manages devices and files, and provides a way to use the computer. Permissions control who can read, edit, or run files.
 
 ## 5. Difficulties faced
-Looking at the permission string `-rw-r--r--` looked like random letters at first glance.
+The permission string `-rw-r--r--` was confusing at first.
 
 ## 6. How I resolved them
-I broke it down into chunks: the first character tells you if it's a file or folder, and then the next 9 characters are split into three sets of three (owner, group, and everyone else). Once I looked at it that way, it was really simple to read.
+I read the file-type character first, then split the remaining characters into owner, group, and other-user permissions.
 
 ## 7. Evidence / files
 - `mission-03-operating-system/README.md`: System specs, process notes, path explanations, and permissions table.
